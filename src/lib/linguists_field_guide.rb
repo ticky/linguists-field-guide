@@ -33,6 +33,13 @@ module LinguistsFieldGuide
       @languages
     end
 
+    # Get type.
+    #
+    # Returns a type Symbol or nil.
+    def type
+      @type&.to_sym
+    end
+
     # Is it popular?
     def popular?
       @popular

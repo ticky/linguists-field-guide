@@ -14,8 +14,6 @@ module LinguistsFieldGuide
     attr_reader :name
     #See [github-linguist's documentation of `fs_name`](https://www.rubydoc.info/gems/github-linguist/Linguist/Language#fs_name-instance_method)
     attr_reader :fs_name
-    #See [github-linguist's documentation of `type`](https://www.rubydoc.info/gems/github-linguist/Linguist/Language#type-instance_method)
-    attr_reader :type
     #See [github-linguist's documentation of `color`](https://www.rubydoc.info/gems/github-linguist/Linguist/Language#color-instance_method)
     attr_reader :color
     #See [github-linguist's documentation of `aliases`](https://www.rubydoc.info/gems/github-linguist/Linguist/Language#aliases-instance_method)
@@ -60,6 +58,13 @@ module LinguistsFieldGuide
     # Returns an Array of Languages
     def self.all
       @languages
+    end
+
+    # Get type.
+    #
+    # Returns a type Symbol or nil.
+    def type
+      @type&.to_sym
     end
 
     # Is it popular?

@@ -16,7 +16,8 @@ IGNORED_VARIABLE_NAMES = [
 # but do not create a reader automatically
 IGNORED_READER_NAMES = [
   :@popular,
-  :@searchable
+  :@searchable,
+  :@type
 ]
 
 # Docstrings we explicitly replace
@@ -29,7 +30,8 @@ task :regenerate do
   require 'json'
   require 'linguist/language'
 
-  input = File.read("src/linguists_field_guide.rb")
+  source_input = File.read("src/lib/linguists_field_guide.rb")
+  spec_input = File.read("src/spec/linguists_field_guide/linguists_field_guide_spec.rb")
 
   language_variable_names = []
 
@@ -50,7 +52,14 @@ task :regenerate do
                   end
   end
 
-  output = input.sub /^(?<indentation>[ \t]*)__JSON_DATA_GOES_HERE__$/ do
+  language_attr_reader_names = language_variable_names.reject! do |variable_name|
+    IGNORED_READER_NAMES.include? variable_name
+  end
+  .map do |variable_name|
+    variable_name.slice(1, variable_name.length)
+  end
+
+  source_output = source_input.sub /^(?<indentation>[ \t]*)__JSON_DATA_GOES_HERE__$/ do
     indentation = Regexp.last_match[:indentation]
 
     JSON.pretty_generate(language_list, indent: '  ').lines.map do |line|
@@ -64,12 +73,7 @@ task :regenerate do
   .sub /^(?<indentation>[ \t]*)__ATTR_READERS_GO_HERE__$/ do
     indentation = Regexp.last_match[:indentation]
 
-    language_variable_names.reject! do |variable_name|
-      IGNORED_READER_NAMES.include? variable_name
-    end
-    .map do |variable_name|
-      plain_variable_name = variable_name.slice(1, variable_name.length)
-
+    language_attr_reader_names.map do |plain_variable_name|
       docstring = OVERRIDDEN_DOCSTRINGS[plain_variable_name.to_sym] || "See [github-linguist's documentation of `#{plain_variable_name}`](https://www.rubydoc.info/gems/github-linguist/Linguist/Language##{plain_variable_name}-instance_method)"
 
       <<~CODE.chomp
@@ -79,5 +83,17 @@ task :regenerate do
     end.join("\n")
   end
 
-  File.write("lib/linguists_field_guide.rb", output)
+  spec_output = spec_input.sub /^(?<indentation>[ \t]*)__ATTR_NAMES_GO_HERE__$/ do
+    indentation = Regexp.last_match[:indentation]
+
+    language_attr_reader_names.reject! do |variable_name|
+      variable_name == "group_name"
+    end
+    .map do |plain_variable_name|
+      indentation + plain_variable_name
+    end.join("\n")
+  end
+
+  File.write("lib/linguists_field_guide.rb", source_output)
+  File.write("spec/linguists_field_guide/linguists_field_guide_spec.rb", spec_output)
 end
