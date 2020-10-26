@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/linguists_field_guide.svg)](https://rubygems.org/gems/linguists_field_guide) [![Build Status](https://travis-ci.org/ticky/linguists-field-guide.svg?branch=develop)](https://travis-ci.org/ticky/linguists-field-guide)
 
-Field guide based on the knowledge imparted by `github-linguist`.
+Field guide for programming languages, based on the knowledge imparted by `github-linguist`.
 
 ## Background
 

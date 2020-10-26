@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name        = 'linguists_field_guide'
   s.summary     = 'Linguist\'s Field Guide'
-  s.description = 'Field guide based on the knowledge imparted by github-linguist'
+  s.description = 'Field guide for programming languages, based on the knowledge imparted by github-linguist'
   s.homepage    = 'https://github.com/ticky/linguists-field-guide'
   s.version     = '0.1.0'
-  s.date        = '2020-10-21'
+  s.date        = '2020-10-26'
   s.authors     = ['Jessica Stokes']
   s.email       = 'hello@jessicastokes.net'
   s.license     = 'MIT'
