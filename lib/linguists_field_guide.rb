@@ -9,6 +9,8 @@ module LinguistsFieldGuide
   # class, with just enough information to use for reference.
   class Language
     @languages = []
+    @index = {}
+    @name_index = {}
 
     #See [github-linguist's documentation of `name`](https://www.rubydoc.info/gems/github-linguist/Linguist/Language#name-instance_method)
     attr_reader :name
@@ -36,8 +38,6 @@ module LinguistsFieldGuide
     attr_reader :interpreters
     #See [github-linguist's documentation of `filenames`](https://www.rubydoc.info/gems/github-linguist/Linguist/Language#filenames-instance_method)
     attr_reader :filenames
-    #The name of the language this language should be grouped under
-    attr_reader :group_name
 
     # Internal: Creates a Language object,
     # applies all the given attributes to instance variables,
@@ -46,6 +46,8 @@ module LinguistsFieldGuide
       language = new(attributes)
 
       @languages << language
+
+      @index[language.name.downcase] = @name_index[language.name.downcase] = language
     end
 
     # Internal: Applies all the given attributes to instance variables.
@@ -58,6 +60,24 @@ module LinguistsFieldGuide
     # Returns an Array of Languages
     def self.all
       @languages
+    end
+
+    # Look up Language by its proper name.
+    #
+    # name - The String name of the Language
+    def self.find_by_name(name)
+      @name_index[name&.downcase]
+    end
+
+    # Get Language group
+    #
+    # Returns a Language
+    def group
+      @group ||= if @group_name.nil?
+                   self
+                 else
+                   Language.find_by_name(@group_name)
+                 end
     end
 
     # Get type.

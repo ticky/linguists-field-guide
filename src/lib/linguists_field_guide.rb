@@ -9,6 +9,8 @@ module LinguistsFieldGuide
   # class, with just enough information to use for reference.
   class Language
     @languages = []
+    @index = {}
+    @name_index = {}
 
     __ATTR_READERS_GO_HERE__
 
@@ -19,6 +21,8 @@ module LinguistsFieldGuide
       language = new(attributes)
 
       @languages << language
+
+      @index[language.name.downcase] = @name_index[language.name.downcase] = language
     end
 
     # Internal: Applies all the given attributes to instance variables.
@@ -31,6 +35,24 @@ module LinguistsFieldGuide
     # Returns an Array of Languages
     def self.all
       @languages
+    end
+
+    # Look up Language by its proper name.
+    #
+    # name - The String name of the Language
+    def self.find_by_name(name)
+      @name_index[name&.downcase]
+    end
+
+    # Get Language group
+    #
+    # Returns a Language
+    def group
+      @group ||= if @group_name.nil?
+                   self
+                 else
+                   Language.find_by_name(@group_name)
+                 end
     end
 
     # Get type.

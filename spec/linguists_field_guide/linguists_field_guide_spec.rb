@@ -47,14 +47,8 @@ RSpec.describe LinguistsFieldGuide::Language do
           end
 
           describe "manually implemented methods' values match" do
-            it "group_name" do
-              if fieldguide_language.group_name.nil?
-                # If no group is present, the group is _this_ language
-                expect(linguist_language.group.name).to eql(fieldguide_language.name)
-              else
-                # If a group is present, the group is another language
-                expect(linguist_language.group.name.downcase).to eql(fieldguide_language.group_name.downcase)
-              end
+            it "group" do
+              expect(linguist_language.group&.name).to eql(fieldguide_language.group&.name)
             end
 
             it "popular?" do
@@ -71,6 +65,14 @@ RSpec.describe LinguistsFieldGuide::Language do
           end
         end
       end
+    end
+  end
+
+  describe "#find_by_name" do
+    it "finds the item you expect" do
+      rust_lang = LinguistsFieldGuide::Language.find_by_name "Rust"
+      expect(rust_lang).not_to be_nil
+      expect(rust_lang.name).to eql("Rust")
     end
   end
 end

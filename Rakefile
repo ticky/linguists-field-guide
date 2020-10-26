@@ -15,6 +15,7 @@ IGNORED_VARIABLE_NAMES = [
 # Variable names for which we do create instance variables,
 # but do not create a reader automatically
 IGNORED_READER_NAMES = [
+  :@group_name,
   :@popular,
   :@searchable,
   :@type
@@ -86,10 +87,7 @@ task :regenerate do
   spec_output = spec_input.sub /^(?<indentation>[ \t]*)__ATTR_NAMES_GO_HERE__$/ do
     indentation = Regexp.last_match[:indentation]
 
-    language_attr_reader_names.reject! do |variable_name|
-      variable_name == "group_name"
-    end
-    .map do |plain_variable_name|
+    language_attr_reader_names.map do |plain_variable_name|
       indentation + plain_variable_name
     end.join("\n")
   end
