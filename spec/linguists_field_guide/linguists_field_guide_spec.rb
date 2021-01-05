@@ -74,5 +74,10 @@ RSpec.describe LinguistsFieldGuide::Language do
       expect(rust_lang).not_to be_nil
       expect(rust_lang.name).to eql("Rust")
     end
+
+    it "returns nil for invalid language names" do
+      invalid_lang = LinguistsFieldGuide::Language.find_by_name "Bash"
+      expect(invalid_lang).to be_nil
+    end
   end
 end
