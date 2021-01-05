@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    linguists_field_guide (0.1.1)
+    linguists_field_guide (0.2.0)
 
 GEM
   remote: https://rubygems.org/
