@@ -7,7 +7,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     charlock_holmes (0.7.7)
-    diff-lcs (1.3)
+    diff-lcs (1.4.4)
     docile (1.3.2)
     escape_utils (1.2.1)
     github-linguist (7.11.1)
@@ -16,20 +16,20 @@ GEM
       mini_mime (~> 1.0)
       rugged (>= 0.25.1)
     mini_mime (1.0.2)
-    rake (13.0.1)
-    rspec (3.8.0)
-      rspec-core (~> 3.8.0)
-      rspec-expectations (~> 3.8.0)
-      rspec-mocks (~> 3.8.0)
-    rspec-core (3.8.0)
-      rspec-support (~> 3.8.0)
-    rspec-expectations (3.8.2)
+    rake (13.0.3)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.1)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.8.0)
-    rspec-mocks (3.8.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.8.0)
-    rspec-support (3.8.0)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.1)
     rugged (1.1.0)
     simplecov (0.19.1)
       docile (~> 1.1)
@@ -40,7 +40,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 2.1.4)
   github-linguist (~> 7.11.1)
   linguists_field_guide!
   rake (>= 12.3.3)
@@ -48,4 +47,4 @@ DEPENDENCIES
   simplecov (~> 0.19.1)
 
 BUNDLED WITH
-   2.1.4
+   2.2.4
