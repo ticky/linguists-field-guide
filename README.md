@@ -1,6 +1,6 @@
 # Linguist's Field Guide 📖
 
-[![Gem Version](https://badge.fury.io/rb/linguists_field_guide.svg)](https://rubygems.org/gems/linguists_field_guide) [![Ruby](https://github.com/ticky/linguists-field-guide/workflows/Ruby/badge.svg)](https://github.com/ticky/linguists-field-guide/actions?query=workflow%3ARuby)
+[![Gem Version](https://badge.fury.io/rb/linguists_field_guide.svg)](https://rubygems.org/gems/linguists_field_guide) [![Ruby](https://github.com/ticky/linguists-field-guide/workflows/Ruby/badge.svg)](https://github.com/ticky/linguists-field-guide/actions?query=workflow%3ARuby) [![codecov](https://codecov.io/gh/ticky/linguists-field-guide/branch/develop/graph/badge.svg?token=LMD2XU2S6N)](https://codecov.io/gh/ticky/linguists-field-guide)
 
 Field guide for programming languages, based on the knowledge imparted by `github-linguist`.
 
