@@ -1395,6 +1395,31 @@ module LinguistsFieldGuide
         "@searchable": true
       },
       {
+        "@name": "Browserslist",
+        "@fs_name": null,
+        "@type": "data",
+        "@color": "#ffd539",
+        "@aliases": [
+          "browserslist"
+        ],
+        "@tm_scope": "text.browserslist",
+        "@ace_mode": "text",
+        "@codemirror_mode": null,
+        "@codemirror_mime_type": null,
+        "@wrap": false,
+        "@language_id": 153503348,
+        "@extensions": [
+        ],
+        "@interpreters": [
+        ],
+        "@filenames": [
+          ".browserslistrc",
+          "browserslist"
+        ],
+        "@popular": false,
+        "@searchable": true
+      },
+      {
         "@name": "C",
         "@fs_name": null,
         "@type": "programming",
@@ -5014,7 +5039,8 @@ module LinguistsFieldGuide
         "@color": null,
         "@aliases": [
           "html+eex",
-          "eex"
+          "eex",
+          "leex"
         ],
         "@tm_scope": "text.html.elixir",
         "@ace_mode": "text",
@@ -5023,7 +5049,8 @@ module LinguistsFieldGuide
         "@wrap": false,
         "@language_id": 149,
         "@extensions": [
-          ".eex"
+          ".eex",
+          ".html.leex"
         ],
         "@interpreters": [
         ],
@@ -5884,6 +5911,7 @@ module LinguistsFieldGuide
           ".jscsrc",
           ".jshintrc",
           ".jslintrc",
+          "devcontainer.json",
           "jsconfig.json",
           "language-configuration.json",
           "tsconfig.json",
@@ -6635,7 +6663,8 @@ module LinguistsFieldGuide
         "@wrap": false,
         "@language_id": 194,
         "@extensions": [
-          ".lvproj"
+          ".lvproj",
+          ".lvlib"
         ],
         "@interpreters": [
         ],
@@ -6643,6 +6672,31 @@ module LinguistsFieldGuide
         ],
         "@popular": false,
         "@searchable": true
+      },
+      {
+        "@name": "Lark",
+        "@fs_name": null,
+        "@type": "data",
+        "@color": "#0b130f",
+        "@aliases": [
+          "lark"
+        ],
+        "@tm_scope": "source.lark",
+        "@ace_mode": "text",
+        "@codemirror_mode": "ebnf",
+        "@codemirror_mime_type": "text/x-ebnf",
+        "@wrap": false,
+        "@language_id": 758480799,
+        "@extensions": [
+          ".lark"
+        ],
+        "@interpreters": [
+        ],
+        "@filenames": [
+        ],
+        "@popular": false,
+        "@searchable": true,
+        "@group_name": "EBNF"
       },
       {
         "@name": "Lasso",
@@ -8264,6 +8318,30 @@ module LinguistsFieldGuide
         "@searchable": true
       },
       {
+        "@name": "NWScript",
+        "@fs_name": null,
+        "@type": "programming",
+        "@color": "#111522",
+        "@aliases": [
+          "nwscript"
+        ],
+        "@tm_scope": "source.c.nwscript",
+        "@ace_mode": "c_cpp",
+        "@codemirror_mode": "clike",
+        "@codemirror_mime_type": "text/x-csrc",
+        "@wrap": false,
+        "@language_id": 731233819,
+        "@extensions": [
+          ".nss"
+        ],
+        "@interpreters": [
+        ],
+        "@filenames": [
+        ],
+        "@popular": false,
+        "@searchable": true
+      },
+      {
         "@name": "Nearley",
         "@fs_name": null,
         "@type": "programming",
@@ -9077,7 +9155,8 @@ module LinguistsFieldGuide
         "@wrap": false,
         "@language_id": 598917541,
         "@extensions": [
-          ".plist"
+          ".plist",
+          ".glyphs"
         ],
         "@interpreters": [
         ],
@@ -9795,7 +9874,7 @@ module LinguistsFieldGuide
         "@aliases": [
           "pod-6"
         ],
-        "@tm_scope": "source.perl6fe",
+        "@tm_scope": "source.raku",
         "@ace_mode": "perl",
         "@codemirror_mode": null,
         "@codemirror_mime_type": null,
@@ -10802,7 +10881,7 @@ module LinguistsFieldGuide
           "perl6",
           "perl-6"
         ],
-        "@tm_scope": "source.perl6fe",
+        "@tm_scope": "source.raku",
         "@ace_mode": "perl",
         "@codemirror_mode": "perl",
         "@codemirror_mime_type": "text/x-perl",
@@ -10874,6 +10953,31 @@ module LinguistsFieldGuide
           ".raw"
         ],
         "@interpreters": [
+        ],
+        "@filenames": [
+        ],
+        "@popular": false,
+        "@searchable": true
+      },
+      {
+        "@name": "ReScript",
+        "@fs_name": null,
+        "@type": "programming",
+        "@color": "#ed5051",
+        "@aliases": [
+          "rescript"
+        ],
+        "@tm_scope": "source.rescript",
+        "@ace_mode": "rust",
+        "@codemirror_mode": "rust",
+        "@codemirror_mime_type": "text/x-rustsrc",
+        "@wrap": false,
+        "@language_id": 501875647,
+        "@extensions": [
+          ".res"
+        ],
+        "@interpreters": [
+          "ocaml"
         ],
         "@filenames": [
         ],
@@ -13067,6 +13171,7 @@ module LinguistsFieldGuide
           "README.1ST",
           "README.me",
           "README.mysql",
+          "README.nss",
           "click.me",
           "delete.me",
           "go.mod",
@@ -14240,6 +14345,7 @@ module LinguistsFieldGuide
           ".psc1",
           ".pt",
           ".rdf",
+          ".res",
           ".resx",
           ".rss",
           ".sch",
