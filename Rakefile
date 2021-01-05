@@ -3,7 +3,7 @@ require "rspec/core/rake_task"
 
 RSpec::Core::RakeTask.new(:spec)
 
-task :default => :spec
+task default: [:regenerate, :spec]
 
 # Variable names we explicitly don't include
 IGNORED_VARIABLE_NAMES = [
