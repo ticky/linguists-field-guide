@@ -17,6 +17,7 @@ module LinguistsFieldGuide
     # Internal: Creates a Language object,
     # applies all the given attributes to instance variables,
     # and adds it to the `#all` list.
+    # @private
     def self.create(attributes)
       language = new(attributes)
 
@@ -26,27 +27,28 @@ module LinguistsFieldGuide
     end
 
     # Internal: Applies all the given attributes to instance variables.
+    # @private
     def initialize(attributes)
       attributes.each do |key, value|
         instance_variable_set(key, value)
       end
     end
 
-    # Returns an Array of Languages
+    # @return [Array<Language>]
     def self.all
       @languages
     end
 
     # Look up Language by its proper name.
     #
-    # name - The String name of the Language
+    # @param [String] name The proper name of a Language
     def self.find_by_name(name)
       @name_index[name&.downcase]
     end
 
     # Get Language group
     #
-    # Returns a Language
+    # @return [Language] The Language group
     def group
       @group ||= if @group_name.nil?
                    self
@@ -57,9 +59,10 @@ module LinguistsFieldGuide
 
     # Get type.
     #
-    # Returns a type Symbol or nil.
+    # @return [Symbol] One of the defined
+    #   [`Linguist::Language::TYPES`](https://www.rubydoc.info/gems/github-linguist/Linguist/Language#TYPES-constant)
     def type
-      @type&.to_sym
+      @type.to_sym
     end
 
     # Is it popular?
