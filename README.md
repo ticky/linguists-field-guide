@@ -25,10 +25,9 @@ gem install linguists_field_guide
 `LinguistsFieldGuide::Language` provides a subset of `Linguist::Language`;
 
 - An Array of all Languages can be retrieved by calling `LinguistsFieldGuide::Language.all`
+- A specific Language can be found by using `LinguistsFieldGuide::Language.find_by_name`
 - Other `Linguist::Language` class methods (`find_by_alias`, `find_by_extension`, `find_by_filename`, etc.) are not currently provided.
 - `Language` instances contain readers for properties included in the version of `Linguist` it was built against, with these exceptions:
-  - `Language` instances do not have a `group` property.  
-    If a given `Language` is a group, the `group_name` property will contain the `name` of the Language it is a child of.
   - Derived methods (`default_alias`, `escaped_name`, `hash`, etc.) are not currently provided.
 
 ### Example
@@ -39,7 +38,7 @@ require 'linguists_field_guide'
 languages_to_check = ["Rust", "Ruby", "JavaScript", "Bash"]
 
 languages_to_check.each do |language_name|
-  if LinguistsFieldGuide::Language.all.any? { |lang| lang.name === language_name }
+  if LinguistsFieldGuide::Language.find_by_name(language_name)
     puts "⭕️ #{language_name} is a known language name"
   else
     puts "❌ #{language_name} isn't a known language name!"
