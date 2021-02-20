@@ -180,6 +180,30 @@ module LinguistsFieldGuide
         "@searchable": true
       },
       {
+        "@name": "ABAP CDS",
+        "@fs_name": null,
+        "@type": "programming",
+        "@color": "#555e25",
+        "@aliases": [
+          "abap-cds"
+        ],
+        "@tm_scope": "source.abapcds",
+        "@ace_mode": "text",
+        "@codemirror_mode": null,
+        "@codemirror_mime_type": null,
+        "@wrap": false,
+        "@language_id": 452681853,
+        "@extensions": [
+          ".asddls"
+        ],
+        "@interpreters": [
+        ],
+        "@filenames": [
+        ],
+        "@popular": false,
+        "@searchable": true
+      },
+      {
         "@name": "ABNF",
         "@fs_name": null,
         "@type": "data",
@@ -1120,6 +1144,30 @@ module LinguistsFieldGuide
         "@searchable": true
       },
       {
+        "@name": "Beef",
+        "@fs_name": null,
+        "@type": "programming",
+        "@color": "#a52f4e",
+        "@aliases": [
+          "beef"
+        ],
+        "@tm_scope": "source.cs",
+        "@ace_mode": "csharp",
+        "@codemirror_mode": "clike",
+        "@codemirror_mime_type": "text/x-csharp",
+        "@wrap": false,
+        "@language_id": 545626333,
+        "@extensions": [
+          ".bf"
+        ],
+        "@interpreters": [
+        ],
+        "@filenames": [
+        ],
+        "@popular": false,
+        "@searchable": true
+      },
+      {
         "@name": "Befunge",
         "@fs_name": null,
         "@type": "programming",
@@ -1346,6 +1394,31 @@ module LinguistsFieldGuide
         "@searchable": true
       },
       {
+        "@name": "Boogie",
+        "@fs_name": null,
+        "@type": "programming",
+        "@color": "#c80fa0",
+        "@aliases": [
+          "boogie"
+        ],
+        "@tm_scope": "source.boogie",
+        "@ace_mode": "text",
+        "@codemirror_mode": null,
+        "@codemirror_mime_type": null,
+        "@wrap": false,
+        "@language_id": 955017407,
+        "@extensions": [
+          ".bpl"
+        ],
+        "@interpreters": [
+          "boogie"
+        ],
+        "@filenames": [
+        ],
+        "@popular": false,
+        "@searchable": true
+      },
+      {
         "@name": "Brainfuck",
         "@fs_name": null,
         "@type": "programming",
@@ -1454,7 +1527,9 @@ module LinguistsFieldGuide
         "@color": "#178600",
         "@aliases": [
           "c#",
-          "csharp"
+          "csharp",
+          "cake",
+          "cakescript"
         ],
         "@tm_scope": "source.cs",
         "@ace_mode": "csharp",
@@ -2096,7 +2171,7 @@ module LinguistsFieldGuide
         "@name": "Closure Templates",
         "@fs_name": null,
         "@type": "markup",
-        "@color": null,
+        "@color": "#0d948f",
         "@aliases": [
           "closure-templates",
           "soy"
@@ -2115,8 +2190,7 @@ module LinguistsFieldGuide
         "@filenames": [
         ],
         "@popular": false,
-        "@searchable": true,
-        "@group_name": "HTML"
+        "@searchable": true
       },
       {
         "@name": "Cloud Firestore Security Rules",
@@ -2350,9 +2424,7 @@ module LinguistsFieldGuide
         "@type": "programming",
         "@color": "#B0CE4E",
         "@aliases": [
-          "component-pascal",
-          "delphi",
-          "objectpascal"
+          "component-pascal"
         ],
         "@tm_scope": "source.pascal",
         "@ace_mode": "pascal",
@@ -3174,8 +3246,7 @@ module LinguistsFieldGuide
         "@filenames": [
         ],
         "@popular": false,
-        "@searchable": true,
-        "@group_name": "HTML"
+        "@searchable": true
       },
       {
         "@name": "EML",
@@ -4371,6 +4442,7 @@ module LinguistsFieldGuide
         "@language_id": 404627610,
         "@extensions": [
           ".gbr",
+          ".cmp",
           ".gbl",
           ".gbo",
           ".gbp",
@@ -4383,6 +4455,7 @@ module LinguistsFieldGuide
           ".gto",
           ".gtp",
           ".gts",
+          ".ncl",
           ".sol"
         ],
         "@interpreters": [
@@ -4891,6 +4964,7 @@ module LinguistsFieldGuide
         "@color": null,
         "@aliases": [
           "hcl",
+          "HashiCorp Configuration Language",
           "terraform"
         ],
         "@tm_scope": "source.terraform",
@@ -4982,9 +5056,7 @@ module LinguistsFieldGuide
           "django",
           "html+django/jinja",
           "html+jinja",
-          "htmldjango",
-          "njk",
-          "nunjucks"
+          "htmldjango"
         ],
         "@tm_scope": "text.html.django",
         "@ace_mode": "django",
@@ -4995,8 +5067,7 @@ module LinguistsFieldGuide
         "@extensions": [
           ".jinja",
           ".j2",
-          ".jinja2",
-          ".njk"
+          ".jinja2"
         ],
         "@interpreters": [
         ],
@@ -5610,6 +5681,7 @@ module LinguistsFieldGuide
           ".coffeelintignore",
           ".cvsignore",
           ".dockerignore",
+          ".eleventyignore",
           ".eslintignore",
           ".gitignore",
           ".nodemonignore",
@@ -5623,6 +5695,31 @@ module LinguistsFieldGuide
         "@popular": false,
         "@searchable": true,
         "@group_name": "INI"
+      },
+      {
+        "@name": "ImageJ Macro",
+        "@fs_name": null,
+        "@type": "programming",
+        "@color": "#99AAFF",
+        "@aliases": [
+          "imagej-macro",
+          "ijm"
+        ],
+        "@tm_scope": "none",
+        "@ace_mode": "text",
+        "@codemirror_mode": null,
+        "@codemirror_mime_type": null,
+        "@wrap": false,
+        "@language_id": 575143428,
+        "@extensions": [
+          ".ijm"
+        ],
+        "@interpreters": [
+        ],
+        "@filenames": [
+        ],
+        "@popular": false,
+        "@searchable": true
       },
       {
         "@name": "Inform 7",
@@ -5866,6 +5963,7 @@ module LinguistsFieldGuide
           ".tern-config",
           ".tern-project",
           ".watchmanconfig",
+          "Pipfile.lock",
           "composer.lock",
           "mcmod.info"
         ],
@@ -5992,31 +6090,6 @@ module LinguistsFieldGuide
         ],
         "@popular": false,
         "@searchable": true
-      },
-      {
-        "@name": "JSX",
-        "@fs_name": null,
-        "@type": "programming",
-        "@color": null,
-        "@aliases": [
-          "jsx"
-        ],
-        "@tm_scope": "source.js.jsx",
-        "@ace_mode": "javascript",
-        "@codemirror_mode": "jsx",
-        "@codemirror_mime_type": "text/jsx",
-        "@wrap": false,
-        "@language_id": 178,
-        "@extensions": [
-          ".jsx"
-        ],
-        "@interpreters": [
-        ],
-        "@filenames": [
-        ],
-        "@popular": false,
-        "@searchable": true,
-        "@group_name": "JavaScript"
       },
       {
         "@name": "Jasmin",
@@ -6147,6 +6220,7 @@ module LinguistsFieldGuide
           ".jsfl",
           ".jsm",
           ".jss",
+          ".jsx",
           ".mjs",
           ".njs",
           ".pac",
@@ -6932,7 +7006,7 @@ module LinguistsFieldGuide
         "@name": "Liquid",
         "@fs_name": null,
         "@type": "markup",
-        "@color": null,
+        "@color": "#67b8de",
         "@aliases": [
           "liquid"
         ],
@@ -7566,6 +7640,7 @@ module LinguistsFieldGuide
           ".mkdn",
           ".mkdown",
           ".ronn",
+          ".scd",
           ".workbook"
         ],
         "@interpreters": [
@@ -8122,7 +8197,7 @@ module LinguistsFieldGuide
         "@name": "Mustache",
         "@fs_name": null,
         "@type": "markup",
-        "@color": null,
+        "@color": "#724b3b",
         "@aliases": [
           "mustache"
         ],
@@ -8140,8 +8215,7 @@ module LinguistsFieldGuide
         "@filenames": [
         ],
         "@popular": false,
-        "@searchable": true,
-        "@group_name": "HTML"
+        "@searchable": true
       },
       {
         "@name": "Myghty",
@@ -8702,6 +8776,31 @@ module LinguistsFieldGuide
         "@group_name": "Python"
       },
       {
+        "@name": "Nunjucks",
+        "@fs_name": null,
+        "@type": "markup",
+        "@color": "#3d8137",
+        "@aliases": [
+          "nunjucks",
+          "njk"
+        ],
+        "@tm_scope": "text.html.nunjucks",
+        "@ace_mode": "nunjucks",
+        "@codemirror_mode": null,
+        "@codemirror_mime_type": null,
+        "@wrap": false,
+        "@language_id": 461856962,
+        "@extensions": [
+          ".njk"
+        ],
+        "@interpreters": [
+        ],
+        "@filenames": [
+        ],
+        "@popular": false,
+        "@searchable": true
+      },
+      {
         "@name": "OCaml",
         "@fs_name": null,
         "@type": "programming",
@@ -9194,7 +9293,7 @@ module LinguistsFieldGuide
         "@name": "Org",
         "@fs_name": null,
         "@type": "prose",
-        "@color": null,
+        "@color": "#77aa99",
         "@aliases": [
           "org"
         ],
@@ -9574,7 +9673,9 @@ module LinguistsFieldGuide
         "@type": "programming",
         "@color": "#E3F171",
         "@aliases": [
-          "pascal"
+          "pascal",
+          "delphi",
+          "objectpascal"
         ],
         "@tm_scope": "source.pascal",
         "@ace_mode": "pascal",
@@ -10898,6 +10999,8 @@ module LinguistsFieldGuide
           ".pl6",
           ".pm",
           ".pm6",
+          ".raku",
+          ".rakumod",
           ".t"
         ],
         "@interpreters": [
@@ -11061,6 +11164,30 @@ module LinguistsFieldGuide
         "@interpreters": [
         ],
         "@filenames": [
+        ],
+        "@popular": false,
+        "@searchable": true
+      },
+      {
+        "@name": "Record Jar",
+        "@fs_name": null,
+        "@type": "data",
+        "@color": "#0673ba",
+        "@aliases": [
+          "record-jar"
+        ],
+        "@tm_scope": "source.record-jar",
+        "@ace_mode": "text",
+        "@codemirror_mode": "properties",
+        "@codemirror_mime_type": "text/x-properties",
+        "@wrap": false,
+        "@language_id": 865765202,
+        "@extensions": [
+        ],
+        "@interpreters": [
+        ],
+        "@filenames": [
+          "language-subtag-registry.txt"
         ],
         "@popular": false,
         "@searchable": true
@@ -11946,7 +12073,7 @@ module LinguistsFieldGuide
         "@name": "Scaml",
         "@fs_name": null,
         "@type": "markup",
-        "@color": null,
+        "@color": "#bd181a",
         "@aliases": [
           "scaml"
         ],
@@ -11964,8 +12091,7 @@ module LinguistsFieldGuide
         "@filenames": [
         ],
         "@popular": false,
-        "@searchable": true,
-        "@group_name": "HTML"
+        "@searchable": true
       },
       {
         "@name": "Scheme",
@@ -12860,6 +12986,7 @@ module LinguistsFieldGuide
         "@filenames": [
           "Cargo.lock",
           "Gopkg.lock",
+          "Pipfile",
           "poetry.lock"
         ],
         "@popular": false,
@@ -13141,7 +13268,8 @@ module LinguistsFieldGuide
         "@color": null,
         "@aliases": [
           "text",
-          "fundamental"
+          "fundamental",
+          "plain text"
         ],
         "@tm_scope": "none",
         "@ace_mode": "text",
@@ -14347,6 +14475,7 @@ module LinguistsFieldGuide
           ".rdf",
           ".res",
           ".resx",
+          ".rs",
           ".rss",
           ".sch",
           ".scxml",
