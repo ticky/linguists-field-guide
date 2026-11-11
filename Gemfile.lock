@@ -18,7 +18,7 @@ GEM
       mini_mime (~> 1.0)
       rugged (>= 0.25.1)
     mini_mime (1.0.2)
-    rake (13.0.3)
+    rake (13.4.2)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
